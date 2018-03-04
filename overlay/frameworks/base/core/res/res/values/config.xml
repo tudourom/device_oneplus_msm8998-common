@@ -162,7 +162,7 @@
         This needs to match the constants in
         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnHomeBehavior">3</integer>
+    <integer name="config_longPressOnHomeBehavior">0</integer>
 
     <!-- Control the behavior when the user long presses the app switch button.
             0 - Nothing
@@ -494,5 +494,13 @@
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
+
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+        delimited by File.pathSeparator, which defaults to ":" on Android -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/OneplusShit/OneplusShit.apk</string>
+
+    <!-- Full qualified name of the class that implements
+        com.android.internal.os.DeviceKeyHandler interface. -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.oneplus.shit.KeyHandler</string>
 
 </resources>

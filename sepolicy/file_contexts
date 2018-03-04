@@ -58,3 +58,7 @@
 
 # wifi
 /(vendor|system/vendor)/bin/wifi-mac-generator                  u:object_r:wifi_mac_generator_exec:s0
+
+# OPShit Toggles
+/sys/devices/virtual/graphics/fb0(/.*)?                         u:object_r:sysfs_graphics:s0
+/sys/devices/virtual/timed_output/vibrator/vtg_level            u:object_r:sysfs_vibrator:s0

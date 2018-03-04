@@ -458,15 +458,17 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     wifi-mac-generator
 
+# Xtended-Special:
+PRODUCT_PACKAGES += \
+	OneplusThreeDoze \
+    OneplusShit
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/sar-vendor-cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/sar-vendor-cmd.xml \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
-
-# Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
